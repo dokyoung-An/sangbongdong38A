@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 7.0.8/20017
 // Filename: ???-38A.ggsk
-// Generated 2023-12-27T17:38:01
+// Generated 2023-12-27T17:53:39
 
 function pano2vrSkin(player,base) {
 	player.addVariable('vis_roomchoice', 2, false, { ignoreInState: 0  });
@@ -5656,7 +5656,7 @@ function pano2vrSkin(player,base) {
 		}
 		me.__74a.logicBlock_backgroundcolor();
 		me.__74a.onclick=function (e) {
-			player.openUrl("https:\/\/gregarious-crepe-3d6b27.netlify.app\/","");
+			player.openNext("{node39}","");
 		}
 		me.__74a.ggUpdatePosition=function (useTransition) {
 		}
@@ -6744,6 +6744,14 @@ function pano2vrSkin(player,base) {
 			}
 			return player.getCurrentNode();
 		}
+		me.__54.onclick=function (e) {
+			me.__29.style.transition='none';
+			me.__29.style.visibility=(Number(me.__29.style.opacity)>0||!me.__29.style.opacity)?'inherit':'hidden';
+			me.__29.ggVisible=true;
+			me.__53.style.transition='none';
+			me.__53.style.visibility='hidden';
+			me.__53.ggVisible=false;
+		}
 		me.__54.ggUpdatePosition=function (useTransition) {
 		}
 		el=me._rectangle_40=document.createElement('div');
@@ -7118,14 +7126,6 @@ function pano2vrSkin(player,base) {
 				return this.parentNode.ggElementNodeId();
 			}
 			return player.getCurrentNode();
-		}
-		me._image_7.onclick=function (e) {
-			me.__29.style.transition='none';
-			me.__29.style.visibility=(Number(me.__29.style.opacity)>0||!me.__29.style.opacity)?'inherit':'hidden';
-			me.__29.ggVisible=true;
-			me.__53.style.transition='none';
-			me.__53.style.visibility='hidden';
-			me.__53.ggVisible=false;
 		}
 		me._image_7.ggUpdatePosition=function (useTransition) {
 		}
@@ -13384,6 +13384,7 @@ function pano2vrSkin(player,base) {
 		hs+='visibility : inherit;';
 		hs+='width : 46.875%;';
 		hs+='pointer-events:none;';
+		hs+='min-width:150px;';
 		el.setAttribute('style',hs);
 		el.style.transformOrigin='50% 50%';
 		me.__3.ggIsActive=function() {
@@ -13486,7 +13487,7 @@ function pano2vrSkin(player,base) {
 		hs+='border : 0px solid #000000;';
 		hs+='color : rgba(34,34,34,1);';
 		hs+='cursor : default;';
-		hs+='height : 29px;';
+		hs+='height : 100%;';
 		hs+='left : calc(50% - ((300px + 0px) / 2) + 0px);';
 		hs+='position : absolute;';
 		hs+='top : 0px;';
@@ -13582,8 +13583,8 @@ function pano2vrSkin(player,base) {
 		hs+='color : rgba(254,153,0,1);';
 		hs+='cursor : default;';
 		hs+='height : 100%;';
+		hs+='left : 0px;';
 		hs+='position : absolute;';
-		hs+='right : 0px;';
 		hs+='top : 0px;';
 		hs+='visibility : inherit;';
 		hs+='width : 50px;';
@@ -14392,7 +14393,7 @@ function pano2vrSkin(player,base) {
 		hs ='';
 		hs+='bottom : -1%;';
 		hs+='cursor : pointer;';
-		hs+='height : 10%;';
+		hs+='height : 50px;';
 		hs+='left : calc(50% - ((100% + 0px) / 2) + 0px);';
 		hs+='position : absolute;';
 		hs+='visibility : inherit;';
@@ -14481,12 +14482,12 @@ function pano2vrSkin(player,base) {
 		hs+='border-radius : 25px;';
 		hs+='color : rgba(255,255,255,1);';
 		hs+='cursor : default;';
-		hs+='height : 30px;';
-		hs+='left : calc(50% - ((115px + 6px) / 2) + 0px);';
+		hs+='height : 100%;';
+		hs+='left : calc(50% - ((100% + 6px) / 2) + 0px);';
 		hs+='position : absolute;';
-		hs+='top : calc(50% - ((30px + 6px) / 2) + 0px);';
+		hs+='top : calc(50% - ((100% + 6px) / 2) + 0px);';
 		hs+='visibility : inherit;';
-		hs+='width : 115px;';
+		hs+='width : 100%;';
 		hs+='pointer-events:auto;';
 		hs+='@import url(\"https:\/\/fonts.googleapis.com\/css2?family=Nanum+Gothic:wght@400;700&display=swap\"); font-family: \"Nanum Gothic\", sans-serif; word-break:keep-all; letter-spacing:1px;';
 		el.setAttribute('style',hs);
@@ -14678,6 +14679,7 @@ function pano2vrSkin(player,base) {
 		hs+='visibility : inherit;';
 		hs+='width : 100%;';
 		hs+='pointer-events:auto;';
+		hs+='min-width:150px;';
 		el.setAttribute('style',hs);
 		el.style.transformOrigin='50% 50%';
 		me._rectangle_5.ggIsActive=function() {
